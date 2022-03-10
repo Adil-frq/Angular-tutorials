@@ -34,3 +34,24 @@ open the code in the text editor
     open the app.component.html
 delete all code form app.component.html and write <h1> Hello World</h1>
 Save Now you can see the changes in browser
+
+
+Interpolation {{}}
+---------------
+app.component.ts
+-------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'first-project';
+  name = 'Angular'
+}
+--******---
+app.component.html
+<h1>Hello from {{name}}</h1>
+
