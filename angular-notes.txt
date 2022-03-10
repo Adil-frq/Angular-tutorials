@@ -53,5 +53,7 @@ export class AppComponent {
 }
 --******---
 app.component.html
+--------------------
 <h1>Hello from {{name}}</h1>
+
 
