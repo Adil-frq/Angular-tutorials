@@ -25,3 +25,12 @@ ng serve
 open your browser and type in the url
 ----------------------------------
 http://localhost:4200/
+
+Change code in the angular
+--------------------------
+open the code in the text editor
+     open the app folder (ie component) 
+          first-project\ src\app
+    open the app.component.html
+delete all code form app.component.html and write <h1> Hello World</h1>
+Save Now you can see the changes in browser
