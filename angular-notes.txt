@@ -55,5 +55,34 @@ export class AppComponent {
 app.component.html
 --------------------
 <h1>Hello from {{name}}</h1>
+-----------------
+How to generate component in Angular ?
+-------------------------------------
+ng generate component <Component_Name>
+eg : ng generate component login
+It will generate in the src->app folder
 
+
+How to create module in Angular ?
+--------------------------------
+ng generate module <Module_Name>
+ eg: ng generate module user-auth
+ or ng g m user-auth
+ 
+ How to generate component in the user-auth module ?
+ ---------------------------------------------------
+ ng g c user-auth/sign-in
+ 
+  How to generate class ?
+  ------------------------
+  ng generate class Dummy
+
+How to generate Interface ?
+---------------------------
+ng g interface IDummy
+
+How to create Build ?
+--------------------
+ng build
+This command will be generate one build file(ie first-project) inside the dist folder which is used to deploy on the server 
 
