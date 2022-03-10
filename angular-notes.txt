@@ -85,4 +85,82 @@ How to create Build ?
 --------------------
 ng build
 This command will be generate one build file(ie first-project) inside the dist folder which is used to deploy on the server 
+When we create any component it will create 4 files and i will update in one files
 
+ng g c logout (for generating component)
+------------
+CREATE src/app/logout/logout.component.html (21 bytes)
+CREATE src/app/logout/logout.component.spec.ts (626 bytes)
+CREATE src/app/logout/logout.component.ts (275 bytes)
+CREATE src/app/logout/logout.component.css (0 bytes)
+UPDATE src/app/app.module.ts (553 bytes)
+ -----
+ app.module.ts
+ -------------
+ import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component'; // this line added
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    LogoutComponent // this line added 
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+----
+How to use componet or How to render component in index.html ?
+----------------------------------------------------------------
+first find the selecter which is available in the 
+    src-> app->logout.component.ts
+    
+ logout.component.ts
+ --------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-logout', // this is selector
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.css']
+})
+export class LogoutComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+---
+open app.component.html and use this selector as a tag
+------------------------------------------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FirstProject</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root> 
+  <app-logout></app-logout> <!-- Use here-->
+</body>
+</html>
+------------------
+The output will be come from the logout.component.html
+
+    
