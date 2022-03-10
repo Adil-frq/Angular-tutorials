@@ -1,1 +1,27 @@
+Download and install "Node JS"
+Check the version of node
+     open the command prompt and type "npm --version"
+     
+Install angular CLI
+----------------------
+npm install -g @angular/cli   
+-g is used for global, suppose you have install it in c drive. so we can access from any drive
 
+check the version of @angular/cli 
+---------------------------------
+ng --version  
+
+create an angular project
+---------------------------
+ng new <Project Name>
+
+eg: ng new My-Project
+
+for run the project
+-------------------
+go the location where your project is available and use command
+ng serve
+
+open your browser and type in the url
+----------------------------------
+http://localhost:4200/
